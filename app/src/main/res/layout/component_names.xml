@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+        <variable
+            name="data"
+            type="com.powernepo.lineaguedragon.dataBinding.ComponentNamesDataObservable" />
+    </data>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/text_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@{data.title, default=TITLE}"
+        android:textColor="#fff"
+        android:textSize="60sp"
+        android:paddingStart="16dp"
+        android:theme="@style/MainTitleLevel01" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/text_second"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@{data.subTitle, default=SUBTITLE}"
+        app:textAllCaps="true"
+        android:textColor="#fff"
+        android:textSize="32sp"
+        android:paddingStart="16dp" />
+
+</LinearLayout>
+</layout>
